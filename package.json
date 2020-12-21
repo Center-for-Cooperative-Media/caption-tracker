@@ -4,6 +4,7 @@
   "description": "A service that tracks captions using the TV Kitchen",
   "main": "index.js",
   "scripts": {
+    "start:kafka": "docker-compose -f services/kafka/docker-compose.yml up -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
