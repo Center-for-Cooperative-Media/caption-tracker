@@ -1,0 +1,20 @@
+{
+  "name": "caption-tracker",
+  "version": "0.0.1",
+  "description": "A service that tracks captions using the TV Kitchen",
+  "main": "index.js",
+  "scripts": {
+    "start:kafka": "docker-compose -f services/kafka/docker-compose.yml up -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Center-for-Cooperative-Media/caption-tracker.git"
+  },
+  "author": "Bad Idea Factory <biffuddotcom@biffud.com>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Center-for-Cooperative-Media/caption-tracker/issues"
+  },
+  "homepage": "https://github.com/Center-for-Cooperative-Media/caption-tracker#readme"
+}
