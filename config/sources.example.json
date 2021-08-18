@@ -1,0 +1,24 @@
+{
+  "tunerDevices": [
+    {
+      "url": "127.0.0.1",
+      "tunerCount": 2
+    },
+  ],
+  "stations": [
+    {
+      "name": "ABCD-TV",
+      "channel": "23",
+      "programs": [
+        {
+          "startMs": 18000000,
+          "durationMs": 10800000,
+          "schedule": ["M", "T", "W", "Th", "F", "S", "Su"],
+          "data": {
+            "title": "Example Program"
+          }
+        }
+      ]
+    }
+  ]
+}
