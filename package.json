@@ -2,10 +2,12 @@
   "name": "caption-tracker",
   "version": "0.0.1",
   "description": "A service that tracks captions using the TV Kitchen",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "lint": "eslint 'src/**/*.js'",
+    "start": "yarn babel-node src/index.js",
     "start:kafka": "docker-compose -f services/kafka/docker-compose.yml up -d",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,32 @@
   "bugs": {
     "url": "https://github.com/Center-for-Cooperative-Media/caption-tracker/issues"
   },
-  "homepage": "https://github.com/Center-for-Cooperative-Media/caption-tracker#readme"
+  "homepage": "https://github.com/Center-for-Cooperative-Media/caption-tracker#readme",
+  "dependencies": {
+    "@tvkitchen/appliance-caption-srt-generator": "0.2.0",
+    "@tvkitchen/appliance-video-caption-extractor": "0.5.1",
+    "@tvkitchen/appliance-video-http-receiver": "0.4.0",
+    "@tvkitchen/appliance-video-segment-generator": "0.2.0",
+    "@tvkitchen/base-constants": "^1.2.0",
+    "@tvkitchen/countertop": "^0.3.0",
+    "dayjs": "^1.10.4",
+    "dropbox": "^9.8.2",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.8.7",
+    "@babel/eslint-parser": "^7.14.3",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/register": "^7.8.6",
+    "@jest/console": "^25.1.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^26.6.3"
+  }
 }
+
